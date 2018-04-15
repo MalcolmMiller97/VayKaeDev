@@ -1,8 +1,50 @@
 body {
     margin: 0;
+    position: relative;
 }
 
 #map {
     height: 100vh;
     width: 100%;
+}
+
+#left-panel {
+    height: 330px;
+    color: #ffffff;
+    margin: 9px;
+    position: absolute;
+    z-index: 1;
+    background: #05050530;
+    font-size: 14px;
+    text-align: center;
+}
+
+#title {
+    font-size: 30px;
+    padding: 5px;
+    cursor: default;
+}
+
+.nav-item {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: #35c9f691;
+}
+
+#theme-wrapper {
+    background: #0000032b;
+    margin: 17px 10px;
+}
+
+#theme-title {
+    background: #ffffff8a;
+    color: #090909;
+    font-size: 18px;
+}
+
+.theme-item {
+    cursor: pointer;
 }
