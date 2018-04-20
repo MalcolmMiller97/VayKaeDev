@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,25 +11,22 @@
     </script>
 </head>
 <body>
-    <div id="left-panel">
-        <div id="title">VayKae</div>
+    <div id="upper-panel">
+        <div id="profile-wrapper">
+            <img id="profile-image" src="{% static 'assets/profile/profile_pic.jpg' %}" />
+            <div id="profile-name">Malcolm Miller</div>
+        </div>
 
-        <nav>
-            <div id="profile-button" class="nav-item">Profile</div>
-            <div id="hot-spots-button" class="nav-item">Hot Spots</div>
-            <div id="friends-button" class="nav-item">Friends</div>
-            <div id="settings-button" class="nav-item">Settings</div>
-        </nav>
-
-        <nav id="theme-wrapper">
-            <div id="theme-title">Themes</div>
-            <div id="standard" class="theme-item">Standard</div>
-            <div id="silver" class="theme-item">Silver</div>
-            <div id="retro" class="theme-item">Retro</div>
-            <div id="dark" class="theme-item">Dark</div>
-            <div id="aubergine" class="theme-item">Aubergine</div>
-        </nav>
+        <div id="title-wrapper">
+            <h1 id="vaykae-title">VayKae</h1>
+        </div>
+        <div id="menu-button">
+            Menu
+        </div>
     </div>
+
     <div id="map"></div>
+
+    <div id="menu-holder"></div>
 </body>
 </html>

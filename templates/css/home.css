@@ -8,21 +8,37 @@ body {
     width: 100%;
 }
 
-#left-panel {
-    height: 330px;
-    color: #ffffff;
-    margin: 9px;
-    position: absolute;
+#upper-panel {
+    background: #3236374d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    opacity: 1;
     z-index: 1;
-    background: #05050530;
-    font-size: 14px;
-    text-align: center;
+    width: 100%;
+    position: absolute;
 }
 
-#title {
-    font-size: 30px;
+#profile-wrapper {
+    padding: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#profile-image {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 45px;
+}
+
+#profile-name {
     padding: 5px;
-    cursor: default;
+}
+
+#vaykae-title {
+    margin: 0;
 }
 
 .nav-item {
@@ -48,3 +64,56 @@ body {
 .theme-item {
     cursor: pointer;
 }
+
+#menu-button {
+    cursor: pointer;
+    padding: 20px;
+}
+
+.active {
+    display: block !important;
+}
+
+/*MENU*/
+#menu-holder {
+    display: none;
+    position: absolute;
+    top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background: #fff;
+    width: 500px;
+}
+
+#menu-wrapper {
+    padding: 20px;
+}
+
+#header-wrapper {
+    text-align: center;
+}
+
+#menu-profile-image {
+    max-width: 90px;
+}
+
+#content-header {
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+#content-wrapper {
+    display: flex;
+    padding: 8px;
+}
+
+#menu-sidebar-wrapper {
+    border-right: 1.5px solid #000;
+}
+
+.menu-tabs {
+    padding: 3px;
+}
+/*MENU*/

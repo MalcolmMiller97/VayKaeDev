@@ -1,8 +1,9 @@
 require('./../css/home.css');
 var $ = require('jquery');
+//Documentation for (webpack) load-google-maps-api: https://www.npmjs.com/package/load-google-maps-api
 var loadGoogleMapsApi = require('load-google-maps-api');
 
-//Documentation for (webpack) load-google-maps-api: https://www.npmjs.com/package/load-google-maps-api
+var menu = require('./../handlebars/menu.hbs');
 
 var map;
 
@@ -60,8 +61,27 @@ function initMap() {
 $(document).ready(function() {
     initMap();
 
+    $(document).on('click', 'body', function () {
+        var $menuHolder = $('#menu-holder');
+        if($menuHolder.hasClass('active')) {
+            $menuHolder.removeClass('active');
+        }
+    });
+
     $(document).on('click', '.theme-item', function () {
         var $this = $(this);
         changeStyle($this.attr('id'));
+    });
+
+    $(document).on('click', '#menu-button', function (e) {
+        e.stopPropagation();
+        var $menuHolder = $('#menu-holder');
+        $menuHolder.empty();
+        $menuHolder.append(menu({'filename': 'profile_pic', 'name': 'Malcom Miller'}));
+        $menuHolder.addClass('active');
+    });
+
+    $(document).on('click', '#menu-holder', function (e) {
+        e.stopPropagation();
     });
 });
